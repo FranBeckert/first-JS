@@ -1,3 +1,15 @@
+// // Pseudocode:
+// SET n to 5
+// SET string to undefined
+// // Upside pyramide
+// FOR i from 1 to n
+//   FOR j from  n to i
+//   FOR K from 0 to (2 * i -1)
+// // downside pyramide  
+// FOR i from 1 to (n-1)  
+//   FOR j from 0 to i
+//   FOR k from (n-1) to 0
+
 let n = 5;
 let string = "";
 // Upside pyramide
