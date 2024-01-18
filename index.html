@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond pattern exercise</title>
+    <style>
+
+        header {
+            color: rgb(110, 27, 27);
+            text-align: center;
+        }       
+
+        /* does not work */
+        #coloring {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diamond star pattern</h1>
+        <p>Created on Javascript</p>
+    </header>
+
+    <script id="coloring">
+        let n = 5;
+        let string = "";
+        // Upside pyramide
+        // External loop (first vertical row)
+        for (let i= 1; i <= n; i++) {
+        // printing spaces
+            for (let j=n; j>i; j--) {
+            string += " ";
+            }
+            // printing star 
+            for (let k=0; k < 2 * i -1; k++) {
+                string += "*";
+            }
+        string += "\n";
+        }
+
+        // downside pyramide
+        for (let i=1; i<=n -1; i++) { 
+            for (let j=0; j<i; j++) {
+                string += " ";
+            }
+            for (let k= (n-i)*2-1; k>0; k--) {
+                string += "*"
+            }
+        string += "\n";
+        }
+        console.log(string);
+        // The method (document.write()) writes HTML expressions or JavaScript code to a document. But accordin to chatGPT there are more modern approaches, such as manipulating the DOM (Document Object Model) directly or using frameworks like React or Vue.js
+        // <pre> is an HTML element that defines preformatted text
+        document.write(`<pre>${string}</pre>`);
+
+        // this does not work
+        // document.getElementById("coloring").innerHTML = `<pre>${string}</pre>`;
+    </script>
+    
+</body>
+</html>
